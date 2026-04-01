@@ -1,0 +1,23 @@
+{
+  "name": "qa-agoda-test",
+  "version": "1.0.0",
+  "description": "\"# qa-agoda-test\"",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maotou-spy/qa-agoda-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maotou-spy/qa-agoda-test/issues"
+  },
+  "homepage": "https://github.com/maotou-spy/qa-agoda-test#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.0",
+    "@types/node": "^25.5.0"
+  }
+}
