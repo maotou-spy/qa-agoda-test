@@ -1,26 +1,30 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: "./tests",
+  testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
   reporter: [
-    ["html", { outputFolder: "tests-report", open: "never" }],
-    ["list"],
+    ['html', { outputFolder: 'tests-report', open: 'never' }],
+    ['list'],
   ],
   use: {
-    baseURL: "https://www.agoda.com",
+    baseURL: 'https://www.agoda.com',
     headless: false,
-    screenshot: "only-on-failure",
-    video: "retain-on-failure",
-    trace: "retain-on-failure",
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'retain-on-failure',
   },
   projects: [
+    // {
+    //   name: "chromium",
+    //   use: { ...devices["Desktop Chrome"] },
+    // },
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: 'edge',
+      use: { ...devices['Desktop Edge'] },
     },
   ],
 });
